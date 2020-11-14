@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('head.ejs') %>
+        
+        <title>WordPlay API</title>
+    </head>
+    <body>
+        <!--HEADER-->
+        <header><%- include('header', {auth: user}) %></header>
+        
+        <section class="example">
+            <div class="wordplay">
+                <h1 class="title is-4" id="wordplay"><%= random %> </h1>
+                <button class="button otherWordplay" onclick="setExample()">UNE AUTRE !!</button>
+            </div>
+        </section>
+        <section class="informations">
+            <div class="head">
+                <h1 class="title is-3 what">Qu'est ce que WordPlay API</h1>
+                <p class="item">WordPlay API est une API de jeux de mot regroupant les meuilleurs jeux de mot</p>
+                <p class="item">Ces jeux de mot sont entierement proposé par la communauté</p>
+                <p class="item">Vous pouvez acceder à cette API gratuitement et rejoindre le discord</p>
+            </div>
+        </section>
+
+        <!--FOOTER-->
+        <%- include('footer.ejs') %>
+
+        <script>
+            function setExample() {
+                window.location.reload();
+            }
+        </script>
+    </body>
+</html>

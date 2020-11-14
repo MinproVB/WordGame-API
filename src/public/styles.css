@@ -1,0 +1,151 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ff7b25;
+    color: #fff;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.5);
+}
+
+header .wrapper {
+    width: 1110px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .wrapper .brand {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-right: 8%;
+    user-select: none;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+header .wrapper .brand .logo {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 70px;
+    height: 70px;
+}
+
+header .wrapper .brand .name {
+    margin-left: 6px;
+    font-size: 26px;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px #000000cc;
+}
+
+header .wrapper .navigation {
+    display: flex;
+    align-items: center;
+}
+
+header .wrapper .navigation .item {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+header .wrapper .navigation .user-place {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+header .wrapper .navigation .user-place .username {
+    margin-left: 8px;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+}
+
+header .wrapper .navigation .user-place .avatar {
+    background-size: 32px;
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+    border: 2px solid #fff;
+}
+
+.example {
+    background-color: #feb236;
+    height: 225px;
+    padding: 40px;
+}
+
+.example .wordplay {
+    background-color: white;
+    padding: 20px;
+    height: 100%;
+    max-width: 990px;
+    margin: auto;
+}
+
+.example .wordplay .otherWordplay {
+    float: right;
+    top: 15px;
+    background-color: #ff7b25;
+}
+
+.example .wordplay #wordplay {
+    color: #ff7b25;
+}
+
+.informations {
+    align-items: center;
+}
+
+.informations .head {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.token {
+    background-color: #feb236;
+}
+
+.token .token_content {
+    padding: 20px;
+    text-align: center;
+}
+
+.token .token_content .token_text .copy {
+    position: relative;
+    background-color: #ff7b25;
+    width: 530px;
+    color: #fff;
+}
+
+.token .token_content .token_text {
+    max-width: 550px;
+    background-color: #fff;
+    margin:0 auto;
+    padding-top: 10px;
+    height: 330px;
+}
+
+.token .token_content .token_text .your_token {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.token .token_content .token_text .token_code {
+    background-color: black;
+    border-radius: 5px;
+    margin: 10px;
+    height: 230px;
+}
+
+.token .token_content .token_text .token_code p {
+    padding-top: 20px;
+    padding-left: 20px;
+    word-break: break-all;
+    max-width: 500px;
+    color: #fff;
+}

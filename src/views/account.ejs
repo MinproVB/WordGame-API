@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('head') %>
+        <title>WordPlay API - Compte</title>
+    </head>
+    <body>
+        <header><%- include('header', {auth: user}) %></header>
+
+        <div class="token">
+            <div class="token_content">
+                <div class="token_text">
+                    <p class="your_token">Votre token</p>
+                    <div class="token_code">
+                        <p id="token_brut"><%= user.token %> </p>
+                    </div>
+                    <button class="button copy" onclick="copy()" id="copy">COPIER</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function copy() {
+                const btn = document.querySelector("#copy")
+                const target = document.querySelector("#token_brut")
+
+                window.getSelection().removeAllRanges();
+                const range = document.createRange();
+                range.selectNode(target);
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+                btn.innerHTML = 'TOKEN COPIÉ';
+                setTimeout(() => {
+                    btn.innerHTML = 'COPIER'
+                    window.getSelection().removeAllRanges();
+                }, 2000);
+            }
+        </script>
+    </body>
+</html>
