@@ -1,4 +1,5 @@
 const express = require('express');
+const log = require('log-to-file');
 const fs = require('fs');
 const utils = require('../utils');
 const wordgames = require('../../wordgame.json');
@@ -31,6 +32,7 @@ router.post('/suggestion', (req,res) => {
         json = JSON.stringify(obj); //convert it back to json
         fs.writeFile(__dirname + '/../../wordgame-notvalid.json', json, 'utf8', () => {
             res.status(200).json({status: 200, message: 'Sucess'});
+            log("Une nouvelle blague a été ajouter par " + req.headers.author + ". La voici : " + req.headers.wordgame, "log.log")
         }); // write it back 
     }});
 })

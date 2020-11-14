@@ -10,5 +10,13 @@
     {
         "id": 3,
         "wordgame": "Quelle mamie fait peur aux voleurs ? Mamie Traillette."
+    },
+    {
+        "id": 4,
+        "wordgame":"Ou mon pote ira, tout mes potirons!"
+    },
+    {
+        "id": 5,
+        "wordgame": "Ne pas confondre un surveillant décédé avec un morpion..."
     }
 ]
