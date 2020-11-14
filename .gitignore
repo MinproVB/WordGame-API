@@ -1,4 +1,6 @@
 # Logs
+src/db/development.sqlite
+
 .sequelizerc
 .env
 package-lock.json

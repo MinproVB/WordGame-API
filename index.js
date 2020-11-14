@@ -3,7 +3,7 @@ require('dotenv').config();
 const app = require('./src/app');
 
 // Start bot
-//require('./src/bot');
+require('./src/bot');
 
 // Start API{
 const server = app.listen(process.env.port, () => {

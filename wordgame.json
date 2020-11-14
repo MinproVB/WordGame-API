@@ -2,5 +2,9 @@
     {
         "id": 1,
         "wordgame": "Jeux de mot test"
+    },
+    {
+        "id": 2,
+        "wordgame": "Deux"
     }
 ]
