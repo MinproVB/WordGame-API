@@ -42,8 +42,6 @@ bot.on('message', async message => {
 
         const wordgame = message.content.slice(prefix.length + command.length).trim();
 
-        message.delete();
-
         if(wordgame.length <= 5) {
             return channel.send({embed: {
                 author: {
@@ -51,7 +49,7 @@ bot.on('message', async message => {
                     icon_url: message.author.displayAvatarURL({format: 'png'})
                 },
                 title: 'Invalide',
-                description: 'Votre jeux de mots est trop petit',
+                description: 'Votre jeu de mot est trop petit',
                 color: '#ff7b25'
             }})
         }
@@ -77,12 +75,11 @@ bot.on('message', async message => {
             obj = JSON.parse(data); //now it an object
             obj.push({author: message.author.username, wordgame: wordgame}); //add some data
             json = JSON.stringify(obj); //convert it back to json
-            fs.writeFile(__dirname + '/../wordgame-notvalid.json', json, 'utf8', () => {}); // write it back 
+            fs.writeFile(__dirname + '/../wordgame-notvalid.json', json, 'utf8', () => {
+                message.member.roles.add(jokeRole);
+                message.delete();
+            }); // write it back 
         }});
-
-        if (!message.member.roles.cache.has(jokeRole)) {
-            message.member.roles.add(jokeRole)
-        }
     }
 });
   
