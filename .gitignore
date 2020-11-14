@@ -1,4 +1,8 @@
 # Logs
+.sequelizerc
+.env
+package-lock.json
+
 logs
 *.log
 npm-debug.log*
