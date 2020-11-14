@@ -97,6 +97,12 @@ header .wrapper .navigation .user-place .avatar {
     color: #ff7b25;
 }
 
+.example .wordplay .nbr_wordgame {
+    color: #ff7b25;
+    top: 30px;
+    position: relative;
+}
+
 .informations {
     align-items: center;
 }

@@ -10,7 +10,8 @@ router.use(auth());
 router.get('/', (req,res) => {
     res.render('home', {
         user: req.user,
-        random: utils.random(wordgames).wordgame
+        random: utils.random(wordgames).wordgame,
+        length: wordgames.length 
     });
 });
 
