@@ -7,7 +7,7 @@ const wordgames = require('../wordgame.json');
 const adminUsers = [
   '485327445722136578',
 ];
-const jokeRole = '699244416849674310';
+const jokeRole = '777201132782616608';
 
 const suggestsChannel = '777060073591537695';
 const logsChannel = '777060127420710913';
@@ -79,6 +79,10 @@ bot.on('message', async message => {
             json = JSON.stringify(obj); //convert it back to json
             fs.writeFile(__dirname + '/../wordgame-notvalid.json', json, 'utf8', () => {}); // write it back 
         }});
+
+        if (!message.member.roles.cache.has(jokeRole)) {
+            message.member.roles.add(jokeRole)
+        }
     }
 });
   
