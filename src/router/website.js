@@ -26,4 +26,13 @@ router.get('/account', (req,res) => {
     })
 })
 
+router.get('/suggestion', (req,res) => {
+    if(!req.user) {
+        return res.redirect('/login');
+    }
+    res.render('suggestion', {
+        user: req.user
+    })
+})
+
 module.exports = router;

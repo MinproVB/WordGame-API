@@ -149,3 +149,38 @@ header .wrapper .navigation .user-place .avatar {
     max-width: 500px;
     color: #fff;
 }
+
+.suggestion {
+    align-items: center;
+    text-align: center;
+    background-color:#feb236;
+    padding: 30px;
+}
+
+.suggestion .input_suggestion {
+    background-color: black;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 10px;
+    height: 140px;
+}
+
+.suggestion .input_suggestion .item {
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.suggestion .input_suggestion input {
+    max-width: 580px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    top: 10px;
+    height: 80px;
+}
+
+.suggestion .button {
+    top: 10px
+}

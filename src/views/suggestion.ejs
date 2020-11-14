@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wordgame-API - Suggestion</title>
+        <%- include('head') %>
+    </head>
+    <body>
+        <header><%- include('header', {auth: user}) %></header>
+
+        <div class="suggestion">
+            <div class="input_suggestion">
+                <p class="item">Taper votre jeu de mot ici</p>
+                <input placeholder="Taper votre jeu de mot" class="input" id="input_suggestion">
+            </div>
+            <button class="button" onclick="addSugestion()">VALIDER</button>
+        </div>
+
+        <footer><%- include('footer') %></footer>
+
+        <script>
+            function addSugestion() {
+                const input = document.getElementById('input_suggestion');
+
+                if(input.value) {
+                    fetch('/api/suggestion', {
+                        method: 'POST',
+                        headers : {
+                            author: '<%= user.user_name %>',
+                            wordgame: input.value,
+                            authorization: '<%= user.token %>',
+                        }
+                    }).then((response) => {
+                        input.value = "";
+                        window.open('/',true);
+                    })
+                } else { alert('Jeu de mot invalide')}
+            }
+        </script>
+    </body>
+</html>

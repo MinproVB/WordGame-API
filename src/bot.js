@@ -70,14 +70,14 @@ bot.on('message', async message => {
             sentMessage.react("✅");
         });
 
-        fs.readFile(__dirname + '/db/wordgame-notvalid.json', 'utf8', function readFileCallback(err, data){
+        fs.readFile(__dirname + '/../wordgame-notvalid.json', 'utf8', function readFileCallback(err, data){
             if (err){
                 console.log(err);
             } else {
             obj = JSON.parse(data); //now it an object
             obj.push({author: message.author.username, wordgame: wordgame}); //add some data
             json = JSON.stringify(obj); //convert it back to json
-            fs.writeFile(__dirname + '/db/wordgame-notvalid.json', json, 'utf8', () => {}); // write it back 
+            fs.writeFile(__dirname + '/../wordgame-notvalid.json', json, 'utf8', () => {}); // write it back 
         }});
     }
 });
