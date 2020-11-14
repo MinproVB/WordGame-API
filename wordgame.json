@@ -1,10 +1,14 @@
 [
     {
         "id": 1,
-        "wordgame": "Jeux de mot test"
+        "wordgame": "Oh ! Ca sent mauvais dans ta voiture. Normal c'est une DaciaSandeo"
     },
     {
         "id": 2,
-        "wordgame": "Deux"
+        "wordgame": "Que fait une lampe quand elle se fait agresser ? Elle crie a LED"
+    },
+    {
+        "id": 3,
+        "wordgame": "Quelle mamie fait peur aux voleurs ? Mamie Traillette."
     }
 ]
