@@ -9,7 +9,7 @@
         <!--HEADER-->
         <header><%- include('header', {auth: user}) %></header>
         
-        <section class="example">
+        <section class="exampleDiv">
             <div class="wordplay">
                 <h1 class="title is-4" id="wordplay"><%= random %> </h1>
                 <button class="button otherWordplay" onclick="setExample()">UNE AUTRE !!</button>
@@ -22,6 +22,46 @@
                 <p class="item">WordGame API est une API de jeux de mot regroupant les meuilleurs jeux de mot</p>
                 <p class="item">Ces jeux de mot sont entierement proposé par la communauté</p>
                 <p class="item">Vous pouvez acceder à cette API gratuitement et rejoindre le discord</p>
+            </div>
+            <div class="usecases" id="use">
+                <a href="#use" class="title-container">
+                    <h3 class="title">Utilisation</h3>
+                </a>
+                <p>Différentes routes vous sont rendues disponibles afin d'adapter l'api a votre projet. Les différents mots clés vous permettront de récupérer une blague aléatoirement dans un thème ou type de blague spécifique.</p>
+                <div class="example">
+                    <h4 class="language">BLAGUE ALÉATOIRE</h4>
+                    <pre><code class="language-javascript">GET /api/random</code></pre>
+                </div>
+                <div class="example">
+                    <h4 class="language">BLAGUE PAR ID</h4>
+                    <pre><code class="language-javascript">GET /api/:id:</code></pre>
+                </div>
+            </div>
+            <div class="usecases" id="example">
+                <a href="#example" class="title-container">
+                    <h3 class="title">Exemple</h3>
+                </a>
+                <p>
+                    Voici un exemple sous forme de cas d'utilisation de l'api dans le cas où l'on souhaite récupérer une blague aléatoirement dans le répertoire toute catégorie confondue
+                </p>
+                <div class="example">
+                    <span class="language">JAVASCRIPT</span>
+                    <pre><code class="language-javascript">fetch('http://wordgame.dns.army/api/random', {
+    headers: {
+        'Authorization': `[TOKEN]`
+    }
+})
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+    /* Expected output:
+    { 
+        "id": 1, 
+        "wordgame": "Jeu de mot"
+    }
+    */
+})</code></pre>
+                </div>
             </div>
         </section>
 
